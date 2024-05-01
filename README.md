@@ -1,11 +1,36 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Mi Proyecto de Tarjetas
 
-Currently, two official plugins are available:
+Este proyecto muestra una tarjeta de producto utilizando React. El componente `Card` obtiene datos de una API y los muestra en la interfaz.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación
+
+1. Clonamos este repositorio.
+2. Ejecuta `yarn` para instalar las dependencias.
+3. Ejecuta `yarn dev` para iniciar la aplicación.
+
+## Componente `Card`
+
+El componente `Card` muestra información sobre un producto:
+
+- Título: {product.title}
+- Descripción: {product.description}
+- Precio: UDS$ {product.price}
+
+## Cambios con TypeScript
+
+Si trabajara con TypeScript (`.tsx`), agregaría tipos a la variable `product`:
+
+```tsx
+interface Product {
+  title: string;
+  description: string;
+  price: number;
+}
+
+const [product, setProduct] = useState<Product>({});
+
 
 ## Install & Run
 - yarn 
